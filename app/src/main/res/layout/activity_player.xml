@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/colorBackground">
+
+
+<LinearLayout
+android:id="@+id/activity_player"
+style="@style/activity"
+
+tools:context="com.example.android.mymusic.Player"
+android:orientation="vertical"
+android:weightSum="1">
+
+<ImageView
+    android:id="@+id/imageView"
+    app:srcCompat="@drawable/musiclogo"
+    style="@style/activityPlayer" />
+
+
+<SeekBar
+    android:id="@+id/seekBar"
+    android:scrollbars="vertical"
+    android:thumb="@android:color/holo_blue_bright"
+    style="@style/seekBar" />
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/btPrevious"
+        style="@style/activityPlayerButton"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/ic_skip_previous_white_24dp" />
+
+    <ImageButton
+        android:id="@+id/btPlay"
+        style="@style/activityPlayerButton"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/ic_play_circle_outline_white_24dp" />
+
+    <ImageButton
+        android:id="@+id/btNext"
+        style="@style/activityPlayerButton"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/ic_skip_next_white_24dp" />
+
+</LinearLayout>
+
+</LinearLayout></ScrollView>
