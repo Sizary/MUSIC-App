@@ -19,8 +19,6 @@ public class MainActivity extends AppCompatActivity {
 
     ListView lv;
     public static String[] items;
-    static String currentlyPlayingSong;
-    TextView currentSong;
 
     @Override
 
@@ -35,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         items = new String[myPhoneSongs.size()];
         for (int i = 0; i < myPhoneSongs.size(); i++) {
             //toast(myPhoneSongs.get(i).getName().toString());
-            currentlyPlayingSong= myPhoneSongs.get(i).getName();
+            //currentlyPlayingSong= myPhoneSongs.get(i).getName();
 
             //cuting  off  extesion of the file (file name)
            items[i] = myPhoneSongs.get(i).getName().toString().replace(".mp3", "").replace(".mp4", "");
@@ -50,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener(){
          @Override
             public void onItemClick(AdapterView<?>parent, View view, int positoin, long id) {
-             startActivity(new Intent(getApplicationContext(), Player.class).putExtra("pos", positoin).putExtra("songlist", myPhoneSongs));
 
+             startActivity(new Intent(getApplicationContext(), Player.class).putExtra("pos", positoin).putExtra("songlist", myPhoneSongs));
 
 
          }});

@@ -4,24 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:background="@color/colorBackground">
-
+    android:background="@color/colorBackground"
+    tools:context="com.example.android.mymusic.Player">
 
 <LinearLayout
 android:id="@+id/activity_player"
 style="@style/activity"
-
-tools:context="com.example.android.mymusic.Player"
 android:orientation="vertical"
 android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="@string/Explanation2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorSongText"
+            android:id="@+id/textView" />
+
+    </LinearLayout>
 
 <ImageView
     android:id="@+id/imageView"
     app:srcCompat="@drawable/musiclogo"
     style="@style/activityPlayer" />
 
+    <TextView
+        android:text="@string/song_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="18dp"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/colorSongText"
+        android:textStyle="bold"
+        android:id="@+id/currentSongName" />
 
-<SeekBar
+    <SeekBar
     android:id="@+id/seekBar"
     android:scrollbars="vertical"
     android:thumb="@android:color/holo_blue_bright"
@@ -52,5 +75,8 @@ android:weightSum="1">
         app:srcCompat="@drawable/ic_skip_next_white_24dp" />
 
 </LinearLayout>
+
+
+
 
 </LinearLayout></ScrollView>

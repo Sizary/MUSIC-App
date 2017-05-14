@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.security.PublicKey;
@@ -27,7 +28,7 @@ public class Player extends AppCompatActivity implements View.OnClickListener {
     SeekBar sb;
     ImageButton btPlay, btNext, btPrevious;
     Thread updateSeekBar;
-
+    TextView currentSong;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class Player extends AppCompatActivity implements View.OnClickListener {
         btPlay = (ImageButton) findViewById(R.id.btPlay);
         btNext = (ImageButton) findViewById(R.id.btNext);
         btPrevious = (ImageButton) findViewById(R.id.btPrevious);
+        currentSong = (TextView) findViewById(R.id.currentSongName);
         sb = (SeekBar) findViewById(R.id.seekBar);
 
 
@@ -55,7 +57,7 @@ public class Player extends AppCompatActivity implements View.OnClickListener {
                 int currentPosition = 0;
                 while (currentPosition < totalDuration) {
                     try {
-                        sleep(10000);
+                        sleep(50000);
                         currentPosition = mp.getCurrentPosition();
                         sb.setProgress(currentPosition);
                     } catch (InterruptedException e) {
@@ -79,6 +81,13 @@ public class Player extends AppCompatActivity implements View.OnClickListener {
         //Universal Resource Indicator
         u = Uri.parse(myPhoneSongs.get(position).toString());
         mp = MediaPlayer.create(getApplicationContext(), u);
+
+        //Set currently plaing song
+        position = (position) % myPhoneSongs.size();
+        Uri songName = Uri.parse(myPhoneSongs.get(position).getName());
+        currentSong.setText(songName.toString().replace(".mp3", "").replace(".mp4", ""));
+
+        // Media Player start- after  click one of song from the list
         mp.start();
         sb.setMax(mp.getDuration());
 
@@ -104,6 +113,7 @@ public class Player extends AppCompatActivity implements View.OnClickListener {
         });
     }
 
+    // Functionality for 3 buttons ( Prevoius, Play, Next)
     @Override
     public void onClick(View v) {
         int id = v.getId();
@@ -114,7 +124,13 @@ public class Player extends AppCompatActivity implements View.OnClickListener {
                 if (mp.isPlaying()) {
                     mp.pause();
                 } else mp.start();
+
+                //Set currently plaing song
+                position = (position) % myPhoneSongs.size();
+                Uri songName = Uri.parse(myPhoneSongs.get(position).getName());
+                currentSong.setText(songName.toString().replace(".mp3", "").replace(".mp4", ""));
                 break;
+
             case R.id.btNext:
                 mp.stop();
                 mp.release();
@@ -123,6 +139,11 @@ public class Player extends AppCompatActivity implements View.OnClickListener {
                 mp = MediaPlayer.create(getApplicationContext(), u);
                 mp.start();
                 sb.setMax(mp.getDuration());
+
+                //Set currently plaing song
+                Uri songNameN = Uri.parse(myPhoneSongs.get(position).getName().replace(".mp3", "").replace(".mp4", ""));
+                currentSong.setText(songNameN.toString());
+
                 break;
             case R.id.btPrevious:
                 mp.stop();
@@ -133,6 +154,10 @@ public class Player extends AppCompatActivity implements View.OnClickListener {
                 mp = MediaPlayer.create(getApplicationContext(), u);
                 mp.start();
                 sb.setMax(mp.getDuration());
+
+                //Set currently plaing song
+                Uri songNameP = Uri.parse(myPhoneSongs.get(position).getName());
+                currentSong.setText(songNameP.toString().replace(".mp3", "").replace(".mp4", ""));
                 break;
 
         }
