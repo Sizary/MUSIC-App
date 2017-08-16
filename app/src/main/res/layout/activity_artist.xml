@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_artist"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context="com.example.android.mymusic.Artist">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_weight="1"
+    android:layout_height="160dp">
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp"
+        android:text="@string/ARTIST"
+        android:textColor="@color/colorSongText" />
+</LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/imageArtist"
+                    android:src="@drawable/artist1" />
+
+                <TextView
+                    style="@style/atistName"
+                    android:text="Justin Timberlake" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/imageArtist"
+                    android:src="@drawable/artist2" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    style="@style/atistName"
+                    android:text="Jemi Ji" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/imageArtist"
+                    android:src="@drawable/artist3" />
+
+                <TextView
+                    style="@style/atistName"
+                    android:text="Bruno Mars" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/imageArtist"
+                    android:src="@drawable/artist4" />
+
+                <TextView
+                    style="@style/atistName"
+                    android:text="Shakira" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/imageArtist"
+                    android:src="@drawable/artist5" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    style="@style/atistName"
+                    android:text="Vanessa Mae" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@android:color/holo_blue_bright" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1990dp"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btPrevious"
+                style="@style/activityPlayerButton"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_skip_previous_white_24dp" />
+
+            <ImageButton
+                android:id="@+id/btPlay"
+                style="@style/activityPlayerButton"
+                android:src="@drawable/ic_play_circle_outline_white_24dp" />
+
+            <ImageButton
+                android:id="@+id/btNext"
+                style="@style/activityPlayerButton"
+                android:src="@drawable/ic_skip_next_white_24dp" />
+
+            <Button
+                android:id="@+id/btMain"
+                style="@style/activityPlayerButton"
+                android:layout_weight="1"
+                android:text="@string/main" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

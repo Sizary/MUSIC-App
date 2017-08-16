@@ -2,4 +2,8 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="generesSize">10sp</dimen>
+    <dimen name="Rock">12sp</dimen>
+    <dimen name="house">12sp</dimen>
+    <dimen name="GeneresNames">12sp</dimen>
 </resources>

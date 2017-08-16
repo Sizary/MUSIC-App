@@ -1,6 +1,29 @@
 <resources>
     <string name="app_name">"MY MUSIC "</string>
-    <string name="Explanation1">After starting the application user will be able to immediately see the list of mp3s from the phone and choose the song.</string>
-    <string name="Explanation2">This screen is displaying chosen song and Media Player. User can take control skip the song or chose previous one.</string>
-    <string name="song_name">SONG NAME</string>
+    <string name="ALLSONG">Add ALLSONG \nOn this activity user will be able to find all songs from the phone.</string>
+    <string name="PLAYINGNOW">Add PLAYINGNOW \nThis screen is displaying chosen song and Media Player. User can take control skip the song or chose previous one.</string>
+    <string name="MAINACTIVITY">Add MAINACTIVITY \nAfter starting the application user will be able to see the menu (Song to chose,Artist, Favorite, Generes and All songds) All objects opens new screen with personalized list of mp3s from the phone and choose the song.</string>
+    <string name="ARTIST">Add ARTIST \nThis intent shows list of Artist created from the list of songs from the phone. When user will click on the name of the artist new screen is oppen with all therir songs. The app would use the MediaPlayer API to play and restore the songs</string>
+    <string name="GENERS"> Add GENRES \n This intent shows list of Songs for clicked type of music based on list of songs from the phone.</string>
+    <string name="FAVOURITE">Add FAVOURITE \nThis intent shows list of Songs from the phone in special order(most diplayed songs are appear on the top of the list).</string>
+    <string name="FIND">Add FIND \nThis intent shows list of song based on the keyword that user typed in EditText field</string>
+    <string name="PAYMENT">Add PAYMENT \n This activity will allow the user to buy full subscription of the app with Radio function. To provide this functionality will be implemented Android Pay API. After that User will be able to pay for new functionality</string>
+    <string name="RADIO">Add RADIO \n This is activity for users who have paid full subscription of the app. It will contain a Media Player that streams music from the Cloud Library for streamin music Radio Player Service which uses AAC Player. After clicking play button Payment activity will appear if the user did not pay before.</string>
+    <string name="radio">RADIO</string>
+    <string name="song_name">Music Player</string>
+    <string name="pop">POP</string>
+    <string name="rock">ROCK</string>
+    <string name="search_the_song">Search the song</string>
+    <string name="artist">Artist</string>
+    <string name="favorite">Favorite</string>
+    <string name="genres">Genres</string>
+    <string name="house">HOUSE</string>
+    <string name="hip_hop">HIP HOP</string>
+    <string name="clasic">CLASIC</string>
+    <string name="all_songs">All Songs</string>
+    <string name="upload_song_text">You have to upload music on your device.</string>
+    <string name="player">PLAYER</string>
+    <string name="empty_card">Empty SD Card</string>
+    <string name="upload_music">This layout will apperar if the user don\'t have uploaded music on the device</string>
+    <string name="main">main</string>
 </resources>

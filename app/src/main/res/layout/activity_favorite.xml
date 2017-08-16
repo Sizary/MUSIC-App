@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_favorite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.mymusic.AllSongs">
+
+
+    <TextView
+        android:text="@string/FAVOURITE"
+        style="@style/Explanation" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+              <ListView
+            android:id="@+id/lvPlaylist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/holo_blue_bright" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btPrevious"
+            style="@style/activityPlayerButton"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_skip_previous_white_24dp" />
+
+        <ImageButton
+            android:id="@+id/btPlay"
+            style="@style/activityPlayerButton"
+            android:src="@drawable/ic_play_circle_outline_white_24dp" />
+
+        <ImageButton
+            android:id="@+id/btNext"
+            style="@style/activityPlayerButton"
+            android:src="@drawable/ic_skip_next_white_24dp" />
+
+        <Button
+            android:text="@string/main"
+            style="@style/activityPlayerButton"
+            android:id="@+id/btMain"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+</LinearLayout>

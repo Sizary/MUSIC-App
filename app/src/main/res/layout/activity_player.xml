@@ -2,81 +2,66 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:background="@color/colorBackground"
-    tools:context="com.example.android.mymusic.Player">
-
-<LinearLayout
-android:id="@+id/activity_player"
-style="@style/activity"
-android:orientation="vertical"
-android:weightSum="1">
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/activity_player"
+        style="@style/activity"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/imageView"
+            style="@style/activityPlayer"
+            app:srcCompat="@drawable/musiclogo" />
 
         <TextView
-            android:text="@string/Explanation2"
-            android:layout_width="wrap_content"
+            android:id="@+id/currentSongName"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="24dp"
-            android:textAlignment="center"
+            android:gravity="center"
+            android:paddingTop="18dp"
+            android:text="@string/song_name"
             android:textColor="@color/colorSongText"
-            android:id="@+id/textView" />
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:text="@string/empty_card"
+                android:textAlignment="center"
+                android:textColor="@color/colorSongText"
+                android:textSize="24sp" />
+
+            <Button
+                android:text="return to main page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Return" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:text="@string/upload_music"
+                android:textAlignment="center"
+                android:textColor="@color/colorSongText"
+                android:textSize="18sp" />
+
+        </LinearLayout>
 
     </LinearLayout>
-
-<ImageView
-    android:id="@+id/imageView"
-    app:srcCompat="@drawable/musiclogo"
-    style="@style/activityPlayer" />
-
-    <TextView
-        android:text="@string/song_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="18dp"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:textColor="@color/colorSongText"
-        android:textStyle="bold"
-        android:id="@+id/currentSongName" />
-
-    <SeekBar
-    android:id="@+id/seekBar"
-    android:scrollbars="vertical"
-    android:thumb="@android:color/holo_blue_bright"
-    style="@style/seekBar" />
-
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-    <ImageButton
-        android:id="@+id/btPrevious"
-        style="@style/activityPlayerButton"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/ic_skip_previous_white_24dp" />
-
-    <ImageButton
-        android:id="@+id/btPlay"
-        style="@style/activityPlayerButton"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/ic_play_circle_outline_white_24dp" />
-
-    <ImageButton
-        android:id="@+id/btNext"
-        style="@style/activityPlayerButton"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/ic_skip_next_white_24dp" />
-
-</LinearLayout>
-
-
-
-
-</LinearLayout></ScrollView>
+</ScrollView>

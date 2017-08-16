@@ -17,7 +17,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Player"></activity>
+        <activity android:name=".Player" />
+        <activity android:name=".AllSongs" />
+        <activity android:name=".Artist" />
+        <activity android:name=".Favorite" />
+        <activity android:name=".Search" />
+        <activity android:name=".Geners" />
+        <activity android:name=".PaymentActivity" />
+        <activity android:name=".Radio"></activity>
     </application>
 
 </manifest>
